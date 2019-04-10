@@ -115,18 +115,14 @@ public class SpreadsheetDate extends SerialDate {
     if ((year >= 1900) && (year <= 9999)) {
       this.year = year;
     } else {
-      throw new IllegalArgumentException(
-          "The 'year' argument must be in range 1900 to 9999."
-      );
+      throw new IllegalArgumentException("The 'year' argument must be in range 1900 to 9999.");
     }
 
     if ((month >= MonthConstants.JANUARY)
         && (month <= MonthConstants.DECEMBER)) {
       this.month = month;
     } else {
-      throw new IllegalArgumentException(
-          "The 'month' argument must be in the range 1 to 12."
-      );
+      throw new IllegalArgumentException("The 'month' argument must be in the range 1 to 12.");
     }
 
     if ((day >= 1) && (day <= SerialDate.lastDayOfMonth(month, year))) {
@@ -152,8 +148,7 @@ public class SpreadsheetDate extends SerialDate {
     if ((serial >= SERIAL_LOWER_BOUND) && (serial <= SERIAL_UPPER_BOUND)) {
       this.serial = serial;
     } else {
-      throw new IllegalArgumentException(
-          "SpreadsheetDate: Serial must be in range 2 to 2958465.");
+      throw new IllegalArgumentException("SpreadsheetDate: Serial must be in range 2 to 2958465.");
     }
 
     // the day-month-year needs to be synchronised with the serial number...
@@ -363,8 +358,7 @@ public class SpreadsheetDate extends SerialDate {
    * @return <code>true</code> if this SerialDate is within the specified
    * range.
    */
-  public boolean isInRange(final SerialDate d1, final SerialDate d2,
-                           final int include) {
+  public boolean isInRange(final SerialDate d1, final SerialDate d2, final int include) {
     final int s1 = d1.toSerial();
     final int s2 = d2.toSerial();
     final int start = Math.min(s1, s2);
@@ -431,12 +425,10 @@ public class SpreadsheetDate extends SerialDate {
 
     final int ss2 = calcSerial(1, 1, this.year);
 
-    int[] daysToEndOfPrecedingMonth
-        = AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH;
+    int[] daysToEndOfPrecedingMonth = AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH;
 
     if (isLeapYear(this.year)) {
-      daysToEndOfPrecedingMonth
-          = LEAP_YEAR_AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH;
+      daysToEndOfPrecedingMonth = LEAP_YEAR_AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH;
     }
 
     // get the month from the serial date
@@ -449,8 +441,7 @@ public class SpreadsheetDate extends SerialDate {
     this.month = mm - 1;
 
     // what's left is d(+1);
-    this.day = this.serial - ss2
-        - daysToEndOfPrecedingMonth[this.month] + 1;
+    this.day = this.serial - ss2 - daysToEndOfPrecedingMonth[this.month] + 1;
 
   }
 
