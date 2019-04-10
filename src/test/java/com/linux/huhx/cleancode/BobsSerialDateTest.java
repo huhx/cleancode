@@ -1,15 +1,17 @@
 package com.linux.huhx.cleancode;
 
+import java.util.GregorianCalendar;
 import junit.framework.TestCase;
-import static com.linux.huhx.cleancode.SerialDate.*;
+
 import static com.linux.huhx.cleancode.MonthConstants.*;
-import java.util.*;
+import static com.linux.huhx.cleancode.SerialDate.*;
 
 public class BobsSerialDateTest extends TestCase {
 
   public void testIsValidWeekdayCode() throws Exception {
-    for (int day = 1; day <= 7; day++)
+    for (int day = 1; day <= 7; day++) {
       assertTrue(isValidWeekdayCode(day));
+    }
     assertFalse(isValidWeekdayCode(0));
     assertFalse(isValidWeekdayCode(8));
   }
@@ -73,8 +75,9 @@ public class BobsSerialDateTest extends TestCase {
   }
 
   public void testIsValidMonthCode() throws Exception {
-    for (int i = 1; i <= 12; i++)
+    for (int i = 1; i <= 12; i++) {
       assertTrue(isValidMonthCode(i));
+    }
     assertFalse(isValidMonthCode(0));
     assertFalse(isValidMonthCode(13));
   }
