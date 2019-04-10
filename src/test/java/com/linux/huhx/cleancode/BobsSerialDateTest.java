@@ -1,8 +1,8 @@
 package com.linux.huhx.cleancode;
 
 import junit.framework.TestCase;
-import static clean.code.chapter16.original.SerialDate.*;
-import static clean.code.chapter16.original.MonthConstants.*;
+import static com.linux.huhx.cleancode.SerialDate.*;
+import static com.linux.huhx.cleancode.MonthConstants.*;
 import java.util.*;
 
 public class BobsSerialDateTest extends TestCase {

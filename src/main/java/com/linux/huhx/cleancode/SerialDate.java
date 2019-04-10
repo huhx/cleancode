@@ -63,7 +63,7 @@ import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import static clean.code.chapter16.original.MonthConstants.*;
+import static com.linux.huhx.cleancode.MonthConstants.*;
 
 /**
  * An abstract class that defines our requirements for manipulating dates,
