@@ -6,6 +6,10 @@ import junit.framework.TestCase;
 import static com.linux.huhx.cleancode.MonthConstants.*;
 import static com.linux.huhx.cleancode.SerialDate.*;
 
+/////////////////////////////////////
+// NOTE - THESE DON'T WORK YET!!!
+/////////////////////////////////////
+
 public class BobsSerialDateTest extends TestCase {
 
   public void testIsValidWeekdayCode() throws Exception {
@@ -279,7 +283,7 @@ public class BobsSerialDateTest extends TestCase {
     assertEquals(d(31, DECEMBER, 1904), addDays(5 * 365, newYears));
   }
 
-  private static SpreadsheetDate d(int day, int month, int year) {
+  private static com.linux.huhx.cleancode.SpreadsheetDate d(int day, int month, int year) {
     return new SpreadsheetDate(day, month, year);
   }
 

@@ -56,8 +56,12 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+/////////////////////////////////////
+// NOTE - THESE DON'T WORK YET!!!
+/////////////////////////////////////
+
 /**
- * Some JUnit tests for the {@link SerialDate} class.
+ * Some JUnit tests for the {@link com.linux.huhx.cleancode.SerialDate} class.
  */
 public class SerialDateTest extends TestCase {
 
